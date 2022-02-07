@@ -26,7 +26,17 @@ $ py manage.py runserver 0.0.0.0:10000
 
 ### ruGPT3
 
+Generate text on Russian.
+
 **Endpoint**: /gpt3/text?text=&maxLength=
 
 -   text: _string_. Text for start.
 -   maxLength: _number_. Recomend max length for text.
+
+### ruTitle
+
+Generate title for text on Russian.
+
+**Endpoint**: /gpt/title?text=
+
+-   text: _string_. Title will be generated for this text.
