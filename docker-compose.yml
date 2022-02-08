@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+    rugpt3:
+        container_name: ruGPT3-server
+        build:
+            context: .
+        ports:
+            - '${HOST_IP}:${HOST_PORT}:${HOST_PORT}'
+        command: python manage.py runserver ${HOST_IP}:${HOST_PORT}
+        env_file:
+            - .env
+networks:
+    back:
