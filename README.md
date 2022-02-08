@@ -1,10 +1,24 @@
 # ruGPT3 server
 
+[![FILES](https://img.shields.io/badge/Files-green?style=flat-square&logo=env)](https://gitlab.com/leadrock-afflab/rugpt3-django/-/snippets/2250795)
+
 ## Getting start
+
+### Docker
+
+You can just start docker-compose
+
+```bash
+$ docker-compose up -d
+```
+
+Done, now you can use endpoints
 
 ### Install packages
 
-soon
+```bash
+$ pip install requirements.txt
+```
 
 ### Start
 
