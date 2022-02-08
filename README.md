@@ -1,7 +1,5 @@
 # ruGPT3 server
 
-[![FILES](https://img.shields.io/badge/Files-green?style=flat-square&logo=env)](https://gitlab.com/leadrock-afflab/rugpt3-django/-/snippets/2250795)
-
 ## Getting start
 
 ### Docker
