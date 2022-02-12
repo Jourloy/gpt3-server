@@ -1,5 +1,7 @@
 # ruGPT3 server
 
+This repository **not ready** for production!
+
 ## Getting start
 
 ### Docker
