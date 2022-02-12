@@ -1,17 +1,6 @@
 # ruGPT3 server
 
-#### Not ready for production!
-
-Before start in production mode you should change some important files
-
 ## Getting start
-
-Before all you should create **.env** file and some vars:
-
-```
-HOST_IP=string
-HOST_PORT=number
-```
 
 ### Docker
 
@@ -21,7 +10,11 @@ You can just start docker-compose
 $ docker-compose up -d
 ```
 
-Done, now you can use endpoints.
+Done, now you can use endpoints
+
+#### Warning
+
+You should have too many memory for start docker. If docker build was killed use **Install packages** way.
 
 ### Install packages
 

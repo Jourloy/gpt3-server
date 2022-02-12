@@ -1,8 +1,10 @@
 FROM python:3.9.9
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY requirements.txt ./
+ADD requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY . /app/
+
+RUN python /app/prestart.py

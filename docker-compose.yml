@@ -5,6 +5,8 @@ services:
         container_name: ruGPT3-server
         build:
             context: .
+        volumes:
+            - .:/app
         ports:
             - '${HOST_IP}:${HOST_PORT}:${HOST_PORT}'
         command: python manage.py runserver ${HOST_IP}:${HOST_PORT}
@@ -12,3 +14,5 @@ services:
             - .env
 networks:
     back:
+volumes:
+    rugpt3:
