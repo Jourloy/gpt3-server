@@ -9,7 +9,7 @@ services:
             - .:/app
         ports:
             - '${HOST_IP}:${HOST_PORT}:${HOST_PORT}'
-        command: python manage.py runserver ${HOST_IP}:${HOST_PORT}
+        command: python src/manage.py runserver ${HOST_IP}:${HOST_PORT}
         env_file:
             - .env
 networks:
