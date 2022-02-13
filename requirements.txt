@@ -1,3 +1,6 @@
+Cython
 tensorflow[torch]
 ruprompts[hydra]
+torch
+rudolph
 django

@@ -55,6 +55,22 @@ Generate text on Russian.
 
 Generate title for text on Russian.
 
-**Endpoint**: /gpt/title?text=
+**Endpoint**: /gpt3/title?text=
 
 -   text: _string_. Title will be generated for this text.
+
+### ruDolph
+
+Generate image by a text on Russian.
+
+**Endpoint**: /gpt3/image?text=
+
+-   text: _string_. Short description for image
+
+## Authors
+
+[ru-promts](https://github.com/sberbank-ai/ru-prompts)
+
+[ruGPT3](https://github.com/sberbank-ai/ru-gpts)
+
+[ruDolph](https://github.com/sberbank-ai/ru-dolph)
