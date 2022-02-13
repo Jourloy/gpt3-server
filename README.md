@@ -67,7 +67,7 @@ Generate image by a text on Russian.
 
 -   text: _string_. Short description for image
 
-## Authors
+## Links
 
 [ru-promts](https://github.com/sberbank-ai/ru-prompts)
 
