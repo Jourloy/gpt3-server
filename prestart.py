@@ -1,10 +1,9 @@
-from transformers import AutoTokenizer, AutoModelWithLMHead, pipeline
-import ruprompts
+##########################################################
+# This file is only for prepared models for your system. #
+# It download models before backend start                #
+##########################################################
 
-"""
-Don't look at this file
-It just for download pretrained models before start server
-"""
+from transformers import AutoTokenizer, AutoModelWithLMHead, pipeline
 
 tokenizer = AutoTokenizer.from_pretrained(
             "sberbank-ai/rugpt2large")

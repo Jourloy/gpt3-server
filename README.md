@@ -1,10 +1,20 @@
 # ruGPT3 server
 
-This repository **not ready** for production!
-
 ## Getting start
 
-### Docker
+### Change settings
+
+Look into `src/gpt3/settings.py` and change `SECRET_KEY` and `ALLOWED_HOSTS`!
+
+### About ENV
+
+Project have two env variables, look into `.env.temlpate`. If you are want to use Docker-Compose way, so you should create `.env` file. `HOST_IP` is allowed IPs for you backend (`0.0.0.0` = Allow all). `HOST_PORT` is a port for your backend
+
+If you are want to use Docker way, so you should pass this variables in command
+
+### Starting
+
+#### Docker-Compose
 
 You can just start docker-compose
 
@@ -14,27 +24,47 @@ $ docker-compose up -d
 
 Done, now you can use endpoints
 
-#### Warning
+##### Warning
 
 You should have too many memory for start docker. If docker build was killed use **Install packages** way.
 
-### Install packages
+#### Docker
+
+You can build a docker container
+
+```bash
+$ docker build --build-arg HOST_IP=0.0.0.0 --build-arg HOST_PORT=3000 -t rugpt3 .
+```
+
+And run it
+
+```bash
+$ docker run -d --name ruGP3-Apache rugpt3
+```
+
+##### Warning
+
+You should have too many memory for start docker. If docker build was killed use **Python** way
+
+#### Python
+
+##### Install packages
 
 ```bash
 $ pip install requirements.txt
 ```
 
-### Start
+##### Start
 
-In example below **0.0.0.0** is a IP. If you don't want share access and use local only, just remove this IP. **10000** is a port for app.
+In example below **0.0.0.0** is a IP. If you don't want share access and use local only, just remove this IP. **10000** is a port for app
 
-#### MacOS / Linux
+###### MacOS / Linux
 
 ```bash
 $ python manage.py runserver 0.0.0.0:10000
 ```
 
-#### Windows
+###### Windows
 
 ```bash
 $ py manage.py runserver 0.0.0.0:10000
@@ -42,9 +72,11 @@ $ py manage.py runserver 0.0.0.0:10000
 
 ## Endpoints
 
+You can change it in `src/rpute/urls.py`
+
 ### ruGPT3
 
-Generate text on Russian.
+Generate text on Russian
 
 **Endpoint**: /gpt3/text?text=&maxLength=
 
@@ -53,7 +85,7 @@ Generate text on Russian.
 
 ### ruTitle
 
-Generate title for text on Russian.
+Generate title for text on Russian
 
 **Endpoint**: /gpt3/title?text=
 
@@ -61,7 +93,7 @@ Generate title for text on Russian.
 
 ### ruDolph
 
-Generate image by a text on Russian.
+Generate image by a text on Russian
 
 **Endpoint**: /gpt3/image?text=
 
